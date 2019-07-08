@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html><!--登录界面-->
+<head>
+<meta charset="utf-8">
+<title>登录</title>
+<script src="../script/login.js"></script>
+</head>
+<body>
+<h1>天津市机动车驾驶证积分异常查询界面</h1>
+<div id="userName">
+    <form action=""> 
+    帐号    <input type="text" id="un" onkeyup="onInputUserName(this.value)" placeholder="UserName"/>
+    </form>
+    <br>
+</div>
+<div id="passWord">
+    <form action=""> 
+    密码    <input type="password" id="pw" onkeyup="onInputPassWord(this.value)" placeholder="Password"/>
+    </form>
+    <br>
+</div>
+
+<button type="button" onclick="onLogin()">登录</button>
+</body>
+</html>

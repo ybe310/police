@@ -1,15 +1,77 @@
 <!DOCTYPE html>
-<html><!--登录界面-->
+<html><!--主页界面-->
 <head>
 <meta charset="utf-8">
-<title>登录</title>
+<title>主页</title>
 <script src="../script/request.js"></script>
 <script src="../script/home.js"></script>
+    <style>
+     div.leftContainer
+    {
+        text-align:left;
+        background-color: whitesmoke;
+        width: 300px;
+        height: 500px;
+        border: 1px solid black;
+        padding: 25px;
+        margin: 25px;
+        position:fixed;
+        top:10px;
+        left:5px;
+    } 
+    div.rightContainer
+    {
+        text-align:right;
+        background-color: white;
+        width: 500px;
+        height: 500px;
+        border: 1px solid black;
+        padding: 25px;
+        margin: 25px;
+        position:fixed;
+        top:10px;
+        left:400px;
+    } 
+    h1.title
+    {
+        text-align:left;
+        color:red;
+    } 
+
+    .queryItem
+    {
+        text-align:left;
+        color:black;
+    } 
+    </style>
 </head>
 <body>
-<h1>查询的数据显示</h1>
-<table id="table">
-</table>
-<button type="button" onclick="onGetData()">查询</button>
+    <div class="leftContainer">
+        <h1 class=title>查询的数据显示</h1>
+        <marquee direction="up">
+            <table id="table" class="queryItem">
+            </table>
+        </marquee>
+        <script>
+            onGetData();
+        </script>
+        <!--<button type="button" onclick="onGetData()">查询</button>-->
+    </div>
+    <div class="rightContainer">
+        <h1 class=title>主功能页面</h1>
+        <button type="button" style="float:left" onclick="onClickCheckCar()">涉嫌积分变动重点人员车辆查询查询</button>
+        <form action=""> 
+            <table style="float:left">
+                <tr>
+                    <td>请输入重点车辆车牌号</td>
+                    <td><input type="text" onkeyup="onInputCarNumber(this.value)" placeholder="请输入车牌..."/></td>
+                </tr>
+                <tr>
+                    <td>请输入人员信息</td>
+                    <td><input type="text"  onkeyup="onInputLowPerson(this.value)" placeholder="请输入人员信息..."/></td>
+                </tr>
+            </table>
+        </form>
+     </div>
 </body>
 </html>

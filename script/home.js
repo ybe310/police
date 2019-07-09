@@ -1,3 +1,5 @@
+var carNumber = "";
+var lowPerson = "";
 
 function onGetData() {
     var tableNode = document.getElementById("table");
@@ -13,3 +15,15 @@ function onGetData() {
     }
 }
 
+function onInputCarNumber(str) {
+    carNumber = str;
+}
+
+function onInputLowPerson(str) {
+    lowPerson = str;
+}
+
+
+function onClickCheckCar() {
+    
+}

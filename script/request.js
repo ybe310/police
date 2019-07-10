@@ -31,10 +31,10 @@ function onSendRequest(method, url, func)
 function onLoadData()
 {
     var array = new Array();
-    array[0] = {name:"王凯" ,age:"18"};
-    array[1] = {name:"王俊凯" ,age:"28"};
-	array[2] = { name: "王凯俊", age: "38" };
-	array[3] = { name: "王帅凯", age: "8" };
+    array[0] = {name:"王凯" ,number:"津A66666"};
+    array[1] = {name:"王俊凯" ,number:"津A88888"};
+	array[2] = { name: "王凯俊", number:"津77777" };
+	array[3] = { name: "王帅凯", number:"津A99999" };
 
     return array;
 }

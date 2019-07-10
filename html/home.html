@@ -47,28 +47,31 @@
 </head>
 <body>
     <div class="leftContainer">
-        <h1 class=title>查询的数据显示</h1>
-        <marquee direction="up">
-            <table id="table" class="queryItem">
+        <h1 class=title>近期违章驾驶证积分</h1>
+        <h2>变动异常车辆</h2>
+        <h3>&nbsp;&nbsp;车主&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;车牌号</h3>
+        <marquee direction="up" height="300">
+            <table id="table" class="queryItem" cellspacing="20px">
             </table>
         </marquee>
         <script>
             onGetData();
         </script>
-        <!--<button type="button" onclick="onGetData()">查询</button>-->
     </div>
     <div class="rightContainer">
         <h1 class=title>主功能页面</h1>
-        <button type="button" style="float:left" onclick="onClickCheckCar()">涉嫌积分变动重点人员车辆查询查询</button>
+        <h2 style="float:left">涉嫌积分变动重点人员车辆查询查询</h2>
         <form action=""> 
             <table style="float:left">
                 <tr>
                     <td>请输入重点车辆车牌号</td>
-                    <td><input type="text" onkeyup="onInputCarNumber(this.value)" placeholder="请输入车牌..."/></td>
+                    <td><input type="text" onkeyup="onInputCarNumber(this.value)" placeholder="请输入车牌号..."/></td>
+                    <td><button type="button" onclick="onClickCheckCar()">查询</button></td>
                 </tr>
                 <tr>
-                    <td>请输入人员信息</td>
+                    <td>人员积分变动情况查询</td>
                     <td><input type="text"  onkeyup="onInputLowPerson(this.value)" placeholder="请输入人员信息..."/></td>
+                    <td><button type="button" onclick="onClickCheckPerson()">查询</button></td>
                 </tr>
             </table>
         </form>

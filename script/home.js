@@ -2,16 +2,22 @@ var carNumber = "";
 var lowPerson = "";
 
 function onGetData() {
+    var data = onLoadData();
+
     var tableNode = document.getElementById("table");
     for (var i = tableNode.rows.length; i > 0; i--){
         tableNode.deleteRow(0);
     }
-
-    var data = onLoadData();
-    for (var i = 0; i < data.length; i++) {
-        var trNode = tableNode.insertRow();
-        var tdNode = trNode.insertCell();
-        tdNode.innerHTML= data[i].name + "   " + data[i].age;
+    for (var i = 0; i < data.length; i++){
+        tableNode.insertRow();
+    }
+    for (var i = 0; i < tableNode.rows.length; i++){
+        var row = tableNode.rows[i];
+        
+        var elem1 = row.insertCell();
+        elem1.innerHTML = data[i].name;
+        var elem2 = row.insertCell();
+        elem2.innerHTML = data[i].number;
     }
 }
 
@@ -25,5 +31,9 @@ function onInputLowPerson(str) {
 
 
 function onClickCheckCar() {
+    
+}
+
+function onClickCheckPerson() {
     
 }

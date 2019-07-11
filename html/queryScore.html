@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html><!--积分查询-->
+<head>
+<meta charset="utf-8">
+<title>积分查询</title>
+<script src="../script/request.js"></script>
+<script src="../script/queryScore.js"></script>
+<style>
+    table {
+        border-collapse: collapse;
+        width:100%;
+    }
+    
+    table, td, th {
+        border: 1px solid black;
+    }
+    th
+    {
+        height:50px;
+    }
+</style>
+</head>
+<body>
+<h1>积分变动异常情况显示：</h1>
+<table id="scoreDisplay">
+</table>
+<script>
+    onShowScoreData();
+</script>
+</body>
+</html>

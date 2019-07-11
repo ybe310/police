@@ -31,9 +31,17 @@ function onInputLowPerson(str) {
 
 
 function onClickCheckCar() {
-    
+    if (carNumber == "") {
+        alert('输入有误！');
+        return;
+    }
+    window.location.href='../html/breakRuleInfo.html';
 }
 
 function onClickCheckPerson() {
-    
+    if (lowPerson == "") {
+        alert('输入有误！');
+        return;
+    }
+    window.location.href='../html/queryScore.html';
 }

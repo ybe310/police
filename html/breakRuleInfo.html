@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html><!--违章信息查询-->
+<head>
+<meta charset="utf-8">
+<title>车辆违章情况</title>
+<script src="../script/jquery-3.3.1.min.js"></script>
+<script src="../script/request.js"></script>
+<script src="../script/breakRuleInfo.js"></script>
+<style>
+    table {
+        border-collapse: collapse;
+        width:100%;
+    }
+    
+    table, td, th {
+        border: 1px solid black;
+    }
+    th{
+        height:50px;
+    }
+    table.personTable
+    {
+        text-align:left;
+        border: 0px solid black;
+        width: 300px;
+        height: 200px;
+    } 
+    td.presonItem{
+        border: 0px;
+        color:black;
+    }
+</style>
+</head>
+<body>
+<div>
+    <h1>公安大数据数据碰撞后涉嫌买卖积分重点人员信息</h1>
+    <marquee direction="up" height="200">
+            <table id="personDisplay" class="personTable">
+            </table>
+    </marquee>
+    <script>
+            onShowPersonData();
+    </script>
+</div>
+<div>
+<h1>车辆违章情况:</h1>
+    <table id="breakRuleDisplay" class="breakRuleTable">
+    </table>
+    <script>
+        onShowBreakRuleData();
+    </script>
+</div>
+</body>
+</html>

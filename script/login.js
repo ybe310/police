@@ -3,13 +3,13 @@ var userName = "";
 var passWord = "";
 
 function onLogin() {
-    if (userName == "" || passWord == "") {
-        alert('输入有误！');
+    if (userName != "admin" || passWord != "admin") {
+        alert('账号或密码错误！');
         return;
     }
     //document.write("userName = " + userName + ", passWord = " + passWord);
 
-    window.location.href='../html/home.html';
+    window.location.href='../html/main.html';
 }
 
 function onInputUserName(str) {

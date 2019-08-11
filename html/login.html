@@ -1,25 +1,86 @@
 <!DOCTYPE html>
-<html><!--登录界面-->
+<html>
 <head>
 <meta charset="utf-8">
-<title>登录</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <script src="../script/login.js"></script>
+<title>登录管理</title>
+<!-- <meta name="description" content="登录界面">
+<meta name="keywords" content="登录界面"> -->
+<link href="" rel="stylesheet">
+<style>
+	body,p,div,ul,li,h1,h2,h3,h4,h5,h6{
+		margin:0;
+		padding: 0;
+	}
+	body{
+		background:url(../image/1.jpg)  no-repeat center center;
+		background-size:cover;
+		background-attachment:fixed;
+		background-color:#CCCCCC;
+	}
+	#login{
+		width: 400px;
+		height: 250px;
+		background: #FFFFFF00;
+		margin:200px auto;
+		position: relative;
+	}
+	#login h1{
+		text-align:center; 
+		position:absolute;
+		left:50px;
+		top:-30px;
+		font-size:30px;
+	}
+	#login form p{
+		text-align: center;
+	}
+	#user{
+		background:url(../image/user.png) rgba(0,0,0,.1) no-repeat;
+		width: 200px;
+		height: 30px;
+		border:solid #ccc 1px;
+		border-radius: 3px;
+		padding-left: 32px;
+		margin-top: 50px;
+		margin-bottom: 30px;
+	}
+	#pwd{
+		background: url(../image/pwd.png) rgba(0,0,0,.1) no-repeat;
+		width: 200px;
+		height: 30px;
+		border:solid #ccc 1px;
+		border-radius: 3px;
+		padding-left: 32px;
+		margin-bottom: 30px;
+	}
+	#submit{
+		width: 232px;
+		height: 30px;
+		background: rgba(0,0,0,.1);
+		border:solid #ccc 1px;
+		border-radius: 3px;
+	}
+	#submit:hover{
+		cursor: pointer;
+		background:#D8D8D8;
+	}
+</style>
 </head>
-<body>
-<h1>天津市机动车驾驶证积分异常查询界面</h1>
-<div id="userName">
-    <form action=""> 
-    帐号    <input type="text" id="un" onkeyup="onInputUserName(this.value)" placeholder="UserName"/>
-    </form>
-    <br>
-</div>
-<div id="passWord">
-    <form action=""> 
-    密码    <input type="password" id="pw" onkeyup="onInputPassWord(this.value)" placeholder="Password"/>
-    </form>
-    <br>
+<div id="login">
+	<h1>天津市机动车驾驶证积分异常查询界面</h1>
+	<style>
+
+		</style>
+	<form action="" method="post">
+		<p><input type="text" name="user" id="user" onkeyup="onInputUserName(this.value)" placeholder="用户名"></p>
+		<p><input type="password" name="passw0rd" id="pwd" onkeyup="onInputPassWord(this.value)" placeholder="密码"></p>
+		<!-- <p><input type="submit" id="submit" value="登录"></p> -->
+		<p><button type="button" id="submit" onclick="onLogin()">登录</button></p>
+	</form>
+	
 </div>
 
-<button type="button" onclick="onLogin()">登录</button>
 </body>
 </html>

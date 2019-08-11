@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <link rel="stylesheet" href="../css/login.css">
+    <script src="../script/login.js"></script>
+</head>
+<body>
+<div class="login">
+    <div class="login_title">
+        <p><img src="../images/jinghui.png" style="width:80px;height:80px;margin-right:30px;"/>天津市公安局XX分局xxx平台（系统名称）</p>
+    </div>
+    <div class="login_main">
+        <div class="main_left"></div>
+        <div class="main_right">
+            <div class="right_title">用户登录</div>
+            <form action="">
+                <div class="username">
+                    <img src="../images/username.png" alt="">
+                    <input type="text" name="user" id="user" onkeyup="onInputUserName(this.value)" placeholder="请输入用户名">
+                </div>
+                <div class="password">
+                    <img src="../images/password.png" alt="">
+                    <input type="password" name="passw0rd" id="pwd" onkeyup="onInputPassWord(this.value)" placeholder="请输入密码">
+                </div>
+                <!-- <button class="yes_login" type="button" id="submit" onclick="onLogin()">登录</button> -->
+                <div class="yes_login">
+                    <a>
+                        <button type="button" id="submit" onclick="onLogin()">登&nbsp;&nbsp;&nbsp;&nbsp;录</button>
+                    </a>
+                </div>
+				<center><p style="margin-top:20px;font-size:12px;color:#FA6F03;">登录遇到问题，请联系管理员</p></center>
+            </form>
+        </div>
+    </div>
+    <div class="login_footer">
+        <p class="name">版权所有：天津市xxxx分局</p>
+		<p>建议浏览器：IE8及以上、360、谷歌、Firefox v22</p>
+        <p>技术支持：天津市xxxx科技有限公司 &nbsp;&nbsp;联系电话：022-xxxxxx</p>
+        
+    </div>
+</div>
+
+</body>
+</html>

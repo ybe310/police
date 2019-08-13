@@ -9,10 +9,25 @@
 
     <script type="text/javascript" src="../js/rem.js"></script>
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../css/index.css">
     <title>天津市违法犯罪专项数据查询系统</title>
 </head>
 
 <body style="visibility: hidden;">
+    <div class="nav-main">
+    <div class="nav-box">
+    <div class="nav">
+        <ul class="nav-ul">
+                <li><a href="./main.html" class="home"><span>首页</span></a></li>
+                <li><a href="./home.html" class="develop"><span>提供虚假证言</span></a></li>
+                <li><a href="#" class="wechat"><span>恶意传播性疾病</span></a></li>
+                <li><a href="#" class="case"><span>扩展</span></a></li>
+                <li><a href="#" class="news"><span>扩展</span></a></li>
+        </ul>
+    </div>
+    </div>
+    </div>
+
     <div class="container-flex" tabindex="0" hidefocus="true">
         <div class="box-left">
             <div class="left-top">
@@ -46,7 +61,7 @@
                         </tr>
                     </thead>
                     <tbody id="tList">
-<!--<tr><td colspan="4"><p style="width:9.6rem;">暂无数据</p></td></tr>-->
+                    <!--<tr><td colspan="4"><p style="width:9.6rem;">暂无数据</p></td></tr>-->
                  
                    <tr>
                        <td>张梦</td>
@@ -172,6 +187,51 @@
         var localData = [$('#teacher').val(), $('#start').val() + '/' + $('#end').val(), $('#leader').val()]
         localStorage.setItem("data", localData);
         
+    })
+
+    $(function(){
+        var thisTime;
+        $('.nav-ul li').mouseleave(function(even){
+                thisTime	=	setTimeout(thisMouseOut,1000);
+        })
+
+        $('.nav-ul li').mouseenter(function(){
+            clearTimeout(thisTime);
+            var thisUB	=	$('.nav-ul li').index($(this));
+            if($.trim($('.nav-slide-o').eq(thisUB).html()) != "")
+            {
+                $('.nav-slide').addClass('hover');
+                $('.nav-slide-o').hide();
+                $('.nav-slide-o').eq(thisUB).show();
+            }
+            else{
+                $('.nav-slide').removeClass('hover');
+            }
+            
+        })
+        
+        function thisMouseOut(){
+            $('.nav-slide').removeClass('hover');
+        }
+        
+        $('.nav-slide').mouseenter(function(){
+            clearTimeout(thisTime);
+            $('.nav-slide').addClass('hover');
+        })
+        $('.nav-slide').mouseleave(function(){
+            $('.nav-slide').removeClass('hover');
+        })
+
+        $('.nav').hide();
+        $('.nav-main').mouseenter(function(){
+            clearTimeout(thisTime);
+            $('.nav-main').addClass('hover');
+            $('.nav').show();
+        })
+        $('.nav-main').mouseleave(function(){
+            $('.nav-main').removeClass('hover');
+            $('.nav').hide();
+        })
     })
 </script>
 
